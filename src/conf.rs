@@ -67,16 +67,16 @@ values:
           #  * <REMOTE> will be replaced with name of a remote
           #  * <LOCAL_BRANCH> will be replaced with current branch name
           #  * <REMOTE_BRANCH> will be replaced with name of remote branch
-          pre_format: '\\033[1;33m@<LOCAL_BRANCH>\\033[0m '
+          pre_format: ' \\033[1;33m@<LOCAL_BRANCH>\\033[0m'
           post_format: ''
           # the number of files present locally which are missing in remote repo
         - type: ahead
-          pre_format: '\\033[1;32m'
-          post_format: '↑\\033[0m'
+          pre_format: '\\033[1;32m↑'
+          post_format: '\\033[0m'
           # the number of commits present in remote repo which are missing locally
         - type: behind
-          pre_format: '\\033[1;31m'
-          post_format: '↓\\033[0m'
+          pre_format: '\\033[1;31m↓'
+          post_format: '\\033[0m'
     - type: separator
       display: surrounded
       pre_format: '│'
@@ -99,26 +99,26 @@ values:
     - type: separator
       display: surrounded
       pre_format: ' \\033[1;30m│'
-      post_format: '\\033[0m'
+      post_format: '\\033[0m '
       # the number of untracked files
     - type: new
-      pre_format: ' \\033[0;2;36m'
-      post_format: '?\\033[0m'
+      pre_format: '\\033[0;2;36m?'
+      post_format: '\\033[0m'
       # the number of tracked files which were changed in working tree
     - type: changed
-      pre_format: ' \\033[0;2;32m'
-      post_format: '±\\033[0m'
+      pre_format: '\\033[0;2;32m±'
+      post_format: '\\033[0m'
       # the number of files added to index
     - type: staged
-      pre_format: ' ▶'
-      post_format: ''
+      pre_format: '\\033[1;30m▶'
+      post_format: '\\033[0m'
       # during merge, rebase, or others, the numbers files which conflict
     - type: conflicts
-      pre_format: '✖'
-      post_format: ''
+      pre_format: '\\033[1;30m✖'
+      post_format: '\\033[0m'
     - type: stash
-      pre_format: '☐'
-      post_format: ''
+      pre_format: '\\033[1;30m☐'
+      post_format: '\\033[0m'
 ";
 
 
